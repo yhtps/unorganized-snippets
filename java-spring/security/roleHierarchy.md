@@ -4,7 +4,7 @@
 
 ## on your enum that defines security roles
 
-[Role.java](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/security/roleHierarchy/Role.java)
+[Role.java](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/security/roleHierarchy/Role.java#L22-L26)
 
 ```java
 import java.util.stream.Collectors;
@@ -21,7 +21,7 @@ import java.util.stream.IntStream;
 
 ## on your WebSecurity Configuration
 
-[WebSecConfig.java](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/security/roleHierarchy/WebSecConfig.java)
+[WebSecConfig.java](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/security/roleHierarchy/WebSecConfig.java#L15-L20)
 
 ```java
 import org.springframework.context.annotation.Bean;
