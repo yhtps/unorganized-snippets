@@ -16,4 +16,4 @@ environment: java 17, spring boot 3.1
 
 ## TypeScript(vscode related)
 
-- [file functions](https://github.com/yhtps/unorganized-snippets/blob/latest_branch/typescript/fileUtils.ts)
+- [file functions](https://github.com/yhtps/unorganized-snippets/blob/main/typescript/fileUtils.ts)
