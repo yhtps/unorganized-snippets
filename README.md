@@ -2,7 +2,7 @@
 
 some snippets that i use often
 
-## Java 17
+## Java
 
 environment: java 17, spring boot 3.1
 
