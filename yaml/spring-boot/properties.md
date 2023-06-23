@@ -10,6 +10,6 @@
 
 ## setting jpa on dev
 
-[application-h2.yml](https://github.com/yhtps/unorganized-snippets/blob/main/yaml/spring-boot/properties/application-jpa.yml)
+[application-jpa.yml](https://github.com/yhtps/unorganized-snippets/blob/main/yaml/spring-boot/properties/application-jpa.yml)
 
 > you have to configure the settings in your favor or the output console gets really messy
