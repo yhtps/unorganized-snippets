@@ -28,6 +28,6 @@ or, you could just write the version directly
  annotationProcessor 'jakarta.persistence:jakarta.persistence-api'
 ```
 
-**You could, however, use ~~~`${dependencyManagement.importedProperties['querydsl.version']}`~~~ instead of `5.0.0`**
+**You could, however, use ~~`${dependencyManagement.importedProperties['querydsl.version']}`~~ instead of `5.0.0`**
 
 **but it will break the ext block somehow so I don't recommend it.**
