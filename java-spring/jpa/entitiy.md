@@ -2,8 +2,8 @@
 
 ## Entity
 
-[AttendanceEntity](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/jpa/template/AttendanceEntity.java),
-[UserEntity](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/jpa/template/UserEntity.java)
+[AttendanceEntity](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/jpa/entity/AttendanceEntity.java),
+[UserEntity](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/jpa/entity/UserEntity.java)
 
 ```java
 import jakarta.persistence.Entity;
@@ -33,7 +33,7 @@ import lombok.NoArgsConstructor;
 
 ## MappedSuperclass
 
-[BaseTime](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/jpa/template/BaseTime.java)
+[BaseTime](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/jpa/entity/BaseTime.java)
 
 ```java
 import java.time.LocalDateTime;

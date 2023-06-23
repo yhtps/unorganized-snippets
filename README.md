@@ -8,7 +8,7 @@ environment: java 17, spring boot 3.1
 
 - spring
   - jpa
-    - [templates](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/jpa/template.md)
+    - [entity](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/jpa/entity.md)
       > written in java and markdown.
   - security
     - [set role hierarchy by using enum](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/security/roleHierarchy.md)
