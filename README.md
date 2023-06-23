@@ -12,7 +12,7 @@ environment: java 17, spring boot 3.1
       > written in java and markdown.
   - dev
     - [랜덤한 한국 데이터 생성 메서드](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/dev/koreanData.md)
-      > written in java and markdown.
+      > written in markdown.
 
 ## TypeScript(vscode related)
 
