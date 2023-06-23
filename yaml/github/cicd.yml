@@ -1,0 +1,78 @@
+name: ci cd
+
+on:
+  push:
+    branches: ["main"]
+  # pull_request:
+  # branches: ["main"]
+
+permissions:
+  contents: read
+env:
+  prj: ${{ secrets.A_PRJ }}
+  regionA: ${{ secrets.AWS_R }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3.3.0
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3.9.0
+        with:
+          java-version: "17"
+          distribution: "temurin"
+
+      #       - name: prepare properties
+      #         env:
+      #           some_value: ${{ secrets.ARR_PP }}
+      #         run: $some_value
+      #         shell: bash
+
+      - name: credentials properties
+        env:
+          secret_properties: ${{ secrets.W_PATH }}
+          the_secret: ${{ secrets.W_MDB }}
+          #           other_properties: ${{ secrets.ARR_PATH }}
+          #           other_value: ${{ secrets.ARR_V }}
+          another_properties: ${{ secrets.W_RPATH }}
+          another_value: ${{ secrets.W_R }}
+        #           or: ${{ secrets.O_P }}
+        #           ar: ${{ secrets.O_NV }}
+        run: touch $secret_properties  && echo "$the_secret" > $secret_properties && touch $another_properties  && echo "$another_value" > $another_properties
+        # && touch $other_properties  && echo "$other_value" > $other_properties && touch $or  && echo "$ar" > $or
+        shell: bash
+
+      - name: Gradle Build Action
+        uses: gradle/gradle-build-action@v2.3.3
+        with:
+          gradle-version: 7.6
+          arguments: clean bootJar
+
+      # - name: post build action
+      #   run: scr
+      #   shell: bash
+
+      - name: zip sha
+        run: zip -qq -r ./$GITHUB_SHA.zip .
+        shell: bash
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1-node16
+        with:
+          aws-access-key-id: ${{ secrets.AWS_PU }}
+          aws-secret-access-key: ${{ secrets.AWS_PV }}
+          aws-region: ${{ env.regionA }}
+
+      - name: to S3
+        env:
+          aws_s3: ${{ secrets.AWS_B }}
+        run: aws s3 cp --region $regionA ./$GITHUB_SHA.zip s3://$aws_s3/$prj/$GITHUB_SHA.zip
+
+      - name: code deploy actions
+        env:
+          aws_s3: ${{ secrets.AWS_B }}
+          aws_dd: ${{ secrets.AWS_D }}
+          aws_dist: ${{ secrets.AWS_DG }}
+        run: aws deploy create-deployment --application-name "$aws_dd" --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name "$aws_dist" --s3-location bucket="$aws_s3",bundleType=zip,key="$prj"/$GITHUB_SHA.zip

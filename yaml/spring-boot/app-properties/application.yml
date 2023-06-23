@@ -1,0 +1,13 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+  web:
+    locale: ko_KR
+  profiles:
+    group:
+      dev:
+        - h2
+        - jpa
+    active:
+      - dev
