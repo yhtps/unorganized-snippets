@@ -7,6 +7,9 @@ some snippets that i use often
 environment: java 17, spring boot 3.1
 
 - spring
+  - jpa
+    - [templates](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/jpa/template.md)
+      > written in java and markdown.
   - security
     - [set role hierarchy by using enum](https://github.com/yhtps/unorganized-snippets/blob/main/java-spring/security/roleHierarchy.md)
       > written in java and markdown.
