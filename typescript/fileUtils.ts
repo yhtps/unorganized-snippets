@@ -23,7 +23,7 @@ export async function getQualifiedFileContent(filePath: string, excludeContentRg
   return excludeContentRgx ? excludeContentRgx.map((r: RegExp): string => (fileContent = fileContent.replace(r, ""))).join("") : fileContent;
 }
 
-export async function getFileName(filePath: string): Promise<string> {
+export function getFileName(filePath: string): string {
   return path.basename(filePath);
 }
 
