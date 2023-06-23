@@ -27,3 +27,12 @@ environment: java 17, spring boot 3.1
 - spring boot
 
   - [application properties](https://github.com/yhtps/unorganized-snippets/blob/main/yaml/spring-boot/properties.md)
+
+## Web
+
+- spring
+  - [thymeleaf](https://github.com/yhtps/unorganized-snippets/blob/main/web/spring-boot/thymeleaf.md)
+
+## Gradle, Spring Boot
+
+- [build scripts](https://github.com/yhtps/unorganized-snippets/blob/main/gradle-spring/build-gradle.md)
