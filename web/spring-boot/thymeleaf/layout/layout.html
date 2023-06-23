@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<th:block th:fragment="common(resources,main)">
+  <head>
+    <th:block th:replace="~{/layout/fragment/head :: default}" />
+    <script defer th:src="@{/js/common/default.js}"></script>
+    <th:block th:replace="${resources}" />
+    <!--/*-->
+    <title>Common Layout</title>
+    <!--*/-->
+  </head>
+  <body>
+    <th:block th:replace="~{/layout/fragment/header :: common}" />
+    <th:block th:replace="${main}" />
+    <th:block th:replace="~{/layout/fragment/footer :: common}" />
+  </body>
+</th:block>
+
+<th:block th:fragment="admin(resources,main)">
+  <head>
+    <th:block th:replace="~{/layout/fragment/head :: default}" />
+    <th:block th:replace="${resources}" />
+    <!--/*-->
+    <title>Admin Layout</title>
+    <!--*/-->
+  </head>
+  <body>
+    <th:block th:replace="~{/layout/fragment/header :: admin}" />
+    <th:block th:replace="${main}" />
+  </body>
+</th:block>
+
+<th:block th:fragment="auth(resources,main)">
+  <head>
+    <th:block th:replace="~{/layout/fragment/head :: default}" />
+    <th:block th:replace="${resources}" />
+    <!--/*-->
+    <title>Auth Layout</title>
+    <!--*/-->
+  </head>
+  <body>
+    <th:block th:replace="~{/layout/fragment/header :: auth}" />
+    <th:block th:replace="${main}" />
+    <th:block th:replace="~{/layout/fragment/footer :: common}" />
+  </body>
+</th:block>
