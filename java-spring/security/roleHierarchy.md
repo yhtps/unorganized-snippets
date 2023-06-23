@@ -14,7 +14,7 @@ import java.util.stream.IntStream;
 ```java
  public static String getRoleHierarchy() {
   return IntStream.range(0, Role.values().length - 1)
-          .mapToObj(i -> "ROLE_" + Role.values()[i].name() + " > " + "ROLE_" + Role.values()[i + 1].name())
+          .mapToObj(i -> "ROLE_" + Role.values()[i].name() + " > ROLE_" + Role.values()[i + 1].name())
           .collect(Collectors.joining("\n"));
  }
 ```
