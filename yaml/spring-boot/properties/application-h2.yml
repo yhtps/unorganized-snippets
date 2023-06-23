@@ -4,5 +4,7 @@ spring:
       enabled: true
   datasource:
     url: jdbc:h2:mem:test;MODE=MariaDB
+    # you could use "jdbc:h2:./test;MODE=MariaDB" instead.
+    # then the DB will be created in your project root
     username: sa
     password:

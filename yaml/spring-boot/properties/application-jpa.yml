@@ -1,9 +1,9 @@
 spring:
   jpa:
-    generate-ddl: true
+    generate-ddl: false
     open-in-view: false
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
     properties:
       hibernate:
         "[show_sql]": true
