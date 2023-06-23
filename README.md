@@ -17,3 +17,13 @@ environment: java 17, spring boot 3.1
 ## TypeScript(vscode related)
 
 - [file functions](https://github.com/yhtps/unorganized-snippets/blob/main/typescript/fileUtils.ts)
+
+## Yaml
+
+- github
+
+  - [workflows](https://github.com/yhtps/unorganized-snippets/blob/main/yaml/github/cicd.md)
+
+- spring boot
+
+  - [application properties](https://github.com/yhtps/unorganized-snippets/blob/main/yaml/spring-boot/properties.md)
