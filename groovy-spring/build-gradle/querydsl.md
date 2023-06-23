@@ -15,7 +15,7 @@ in the dependencies block
  annotationProcessor 'jakarta.persistence:jakarta.persistence-api'
 ```
 
-> the jakarta-atp will generate metadata for ide
+> the jakarta-atp will generate metadata for your ide
 
 ---
 
